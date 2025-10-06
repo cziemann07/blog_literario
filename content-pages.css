@@ -1,0 +1,157 @@
+/* content-pages.css
+   Estilos para páginas de conteúdo textual (artigos, análises, manifestos)
+   Adicione este arquivo após o style.css principal
+*/
+
+/* Container para conteúdo textual longo */
+.page-content article,
+.analysis-article {
+    background: white;
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Tipografia para artigos */
+.page-content article h1,
+.analysis-article h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #1a1a1a;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.page-content article h2,
+.analysis-article h2 {
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #2a2a2a;
+    font-weight: 600;
+}
+
+.page-content article p,
+.analysis-article p {
+    margin-bottom: 1.2em;
+    text-align: justify;
+    line-height: 1.8;
+    color: #222;
+}
+
+/* Ênfase e negrito */
+.page-content article em,
+.analysis-article em {
+    font-style: italic;
+}
+
+.page-content article strong,
+.analysis-article strong {
+    font-weight: 700;
+    color: #111;
+}
+
+/* Background suave para a página */
+body.content-page {
+    background: #f5f5f5;
+}
+
+/* Espaçamento entre seções */
+.page-content article section,
+.analysis-article section {
+    margin: 2em 0;
+}
+
+/* Lista de obras (para analises.html) */
+.lista-obras {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.lista-obras li button {
+    width: 100%;
+    padding: 12px 16px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.lista-obras li button:hover {
+    background: #e8e8e8;
+    border-color: #ccc;
+    transform: translateY(-2px);
+}
+
+/* Seção de detalhes da obra */
+.obra-detalhe {
+    background: #fafafa;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #222;
+    margin: 30px 0;
+}
+
+.obra-detalhe h2 {
+    margin-top: 0;
+    color: #111;
+}
+
+.obra-detalhe p {
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .page-content article,
+    .analysis-article {
+        padding: 30px 24px;
+        margin: 20px;
+    }
+    
+    .page-content article h1,
+    .analysis-article h1 {
+        font-size: 1.75em;
+    }
+    
+    .page-content article h2,
+    .analysis-article h2 {
+        font-size: 1.35em;
+    }
+}
+
+@media (max-width: 520px) {
+    .page-content article,
+    .analysis-article {
+        padding: 24px 16px;
+        margin: 10px;
+        box-shadow: none;
+    }
+    
+    .lista-obras {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-content article p,
+    .analysis-article p {
+        text-align: left;
+    }
+}
+
+/* Ajustes para o poema (sobre.html) */
+.page-content pre,
+.page-content [style*="white-space: pre-wrap"] {
+    font-family: Georgia, serif;
+    line-height: 2;
+    white-space: pre-wrap;
+    margin: 20px 0;
+}

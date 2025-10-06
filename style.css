@@ -1,0 +1,260 @@
+/* style.css
+   Estilos principais do template — separado para facilitar estudo.
+   Comentários explicam blocos importantes.
+*/
+
+:root{
+  --bg: #ffffff;
+  --muted: #f2f2f2;
+  --accent: #222;
+  --accent-2: #444;
+  --card: #e9e9e9;
+  --text: #111;
+  --max-width: 1100px;
+  --container-padding: 20px;
+  --radius: 8px;
+  font-size: 16px;
+  --gap: 24px;
+}
+
+/* Reset minimal */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Limita o conteúdo e centraliza */
+.container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px var(--container-padding);
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  background: linear-gradient(180deg,#333,#3b3b3b);
+  color: #fff;
+  position: sticky;
+  top:0;
+  z-index: 50;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+/* Logo à esquerda */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+}
+.logo svg{filter:brightness(0) invert(1)}
+.brand{font-size:20px;letter-spacing:1px}
+
+/* Navegação principal (aparece no desktop) */
+.main-nav{
+  display:flex;
+  gap:20px;
+  margin:0 auto;
+}
+.main-nav .nav-link{
+  color:#ddd;
+  text-decoration:none;
+  font-weight:600;
+  padding:10px 14px;
+  border-radius:20px;
+  transition:background .18s, color .18s;
+}
+.main-nav .nav-link:hover{
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+}
+
+/* Botão do menu (mobile) */
+.menu-btn{
+  display:none;
+  background:#fff;
+  color:#111;
+  border-radius:6px;
+  padding:8px 10px;
+  border:0;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* Menu mobile escondido por padrão */
+.mobile-menu{
+  display:none;
+  background:#2b2b2b;
+  color:#fff;
+  padding:12px 24px;
+}
+.mobile-menu a{
+  display:block;
+  padding:8px 0;
+  color:#eee;
+  text-decoration:none;
+}
+
+/* ---------- HERO / Cards ---------- */
+.hero{
+  background:var(--muted);
+  padding:28px 0;
+}
+.hero-cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  align-items:end;
+}
+
+/* Card individual */
+.card{
+  background: #ddd;
+  border-radius:8px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+  min-height:240px;
+  justify-content:space-between;
+}
+
+.divider{
+  padding:28px 0;
+  border-top:1px solid #efefef;
+  margin-top:40px;
+  text-align: center;
+}
+
+/* Placeholder de imagem - substitua por <img> quando tiver */
+.card .img{
+  width:100%;
+  height:140px;
+  background:linear-gradient(180deg,#eee,#ccc);
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#777;
+  font-weight:600;
+}
+
+/* Botão dentro do card */
+.card-btn{
+  background:#111;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:6px;
+  border:0;
+  cursor:pointer;
+}
+
+/* ---------- Featured posts ---------- */
+.featured{
+  padding:48px 0;
+}
+.featured-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+  align-items:start;
+}
+.post{
+  background:transparent;
+}
+.post-img{
+  height:120px;
+  border:2px solid #e6e6e6;
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#888;
+  margin-bottom:12px;
+}
+.post-title{margin-bottom:8px;font-size:18px}
+.post-desc .line{
+  display:block;
+  height:10px;
+  background:#e6e6e6;
+  margin:8px 0;
+  border-radius:6px;
+}
+.post-desc .short{width:60%}
+
+/* ---------- Genres ---------- */
+.genres{padding:48px 0}
+.genre-cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:24px;
+}
+.genre-card{
+  background:#7b7b7b;
+  color:white;
+  padding:28px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  min-height:200px;
+}
+.genre-label{
+  background:rgba(255,255,255,0.12);
+  padding:8px 14px;
+  border-radius:6px;
+  margin-bottom:20px;
+}
+.genre-btn{
+  background:#111;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+}
+
+/* Footer */
+.site-footer{
+  padding:28px 0;
+  text-align:center;
+  color:#666;
+  font-size:14px;
+  border-top:1px solid #efefef;
+  margin-top:40px;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 900px){
+  :root{--max-width:900px}
+  .hero-cards{ grid-template-columns: repeat(2, 1fr) }
+  .featured-grid{ grid-template-columns: 1fr; }
+  .genre-cards{ grid-template-columns: 1fr; }
+  .main-nav{ display:none; } /* escondemos nav desktop em telas pequenas */
+  .menu-btn{ display:inline-block; }
+  .mobile-menu{ display:none; } /* controlado via JS */
+}
+
+/* small mobile: usa scroll horizontal para hero */
+@media (max-width: 520px){
+  .hero-cards{
+    grid-auto-flow: column;
+    grid-auto-columns: 80%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .card{ scroll-snap-align: start; min-height:220px }
+}

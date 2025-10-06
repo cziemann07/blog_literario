@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Literário</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    Template baseado no wireframe que você enviou.
+    Arquivos separados: index.html, style.css, script.js
+    Comentários inline ajudam a aprender como cada parte funciona.
+  -->
+
+  <!-- Cabeçalho / Topbar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo: pode substituir por uma imagem SVG/PNG real -->
+      <div class="logo" aria-label="Logo do site">
+        <!-- simples ícone de livro em SVG -->
+        <svg width="34" height="28" viewBox="0 0 34 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="0.5" y="2" width="11" height="22" rx="1.5" stroke="black" fill="#222" />
+          <path d="M13 2c6 0 10 2 18 2v20c-8 0-12-2-18-2V2z" fill="#222"/>
+        </svg>
+        <span class="brand">Z</span>
+      </div>
+
+      <!-- Navegação principal (desktop) -->
+      <nav class="main-nav">
+        <a href="sobre.html" class="nav-link">À mim</a>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="sobre.html">Sobre</a>
+      </div>
+
+      <!-- Botão do menu mobile -->
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO: seção de cartões em destaque (o wireframe tinha 4 cards grandes) -->
+  <section class="hero">
+    <div class="container hero-cards" id="heroCards">
+      <article class="card">
+        <div class="img" role="img" aria-label="Capa do destaque 1"></div>
+          <p class="card-desc">Análises literárias</p>
+        <button class="card-btn" onclick="location.href='analises.html'">Ver</button>
+      </article>
+
+      <article class="card">
+        <div class="img" role="img" aria-label="Capa do destaque 2"></div>
+          <p class="card-desc">Julio Verne</p>
+        <button class="card-btn" onclick="location.href='julioverne.html'">Ver</button>
+      </article>
+
+      <article class="card">
+        <div class="img" role="img" aria-label="Capa do destaque 3"></div>
+         <p class="card-desc">A importância da Leitura</p>
+        <button class="card-btn" onclick="location.href='importancia.html'">Ver</button>
+      </article>
+
+      </div>
+  </section>
+
+  <section class="divider">
+    <h2 class="section-title">Prévia de Posts Recentes:</h2>
+  </section>
+
+  <!-- Seção de posts em destaque (3 colunas) -->
+  <section class="featured container">
+    <div class="featured-grid">
+      <article class="post">
+        <div class="post-img">Livro1</div>
+        <h3 class="post-title">Macunaíma</h3>
+        <div class="post-desc">
+          <!-- linhas de "skeleton" simulando resumo — troque por texto real -->
+          <p class="descricao">O "Herói sem Nenhum Caráter" é o nosso espelho mais cruel e, por isso, mais genial. Mário de Andrade, com este manifesto modernista, não nos deu apenas um herói épico; 
+          também nos deu a radiografia de uma nação sem coluna vertebral. Macunaíma é o Brasil: a preguiça fundamental, o sincretismo caótico, o hedonismo sem propósito e a 
+          incapacidade de manter um foco produtivo. É a dialética entre a vastidão da terra e a pequenez moral de quem a habita. O fato de ele se transformar de índio em
+          branco, de adulto em criança, e de se perder em aventuras sem um desfecho moralmente elevado, mostra o caráter proteico e inconstante que nos impede de sermos a
+          potência que deveríamos ser. É uma obra que, sob o verniz da comédia e da fantasia, nos chicoteia com a realidade da nossa mediocridade tropical. Adoramos o livro,
+          mas sofremos com a verdade que ele vomita sobre nós.</p>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-img">Livro2</div>
+        <h3 class="post-title">Dom Casmurro</h3>
+        <div class="post-desc">
+          <!-- linhas de "skeleton" simulando resumo — troque por texto real -->
+          <p class="descricao">
+            A obra é o retrato perfeito da patologia mental travestida de moralidade. O nosso herói, ou melhor,
+            o nosso anti-herói Bentinho, é a encarnação do homem moderno fragilizado, que projeta sua insegurança e
+            impotência naquilo que não consegue controlar: a força indomável do feminino. A tese de que Capitu não traiu não 
+            é apenas uma leitura; é a única leitura honesta. Capitu, com seus olhos de ressaca, é uma figura à frente do seu tempo,
+            dotada de uma inteligência e uma sagacidade que a sociedade patriarcal e tacanha da época (e, sejamos honestos, 
+            a de hoje em grande parte) não podia tolerar. Ela não era adúltera; era livre. Bentinho, por sua vez, é o psicopata avant la lettre,
+            o narrador não confiável por excelência, que manipula a história para justificar sua inveja do que é vital e seu delírio paranoico. 
+            A beleza da obra de Machado reside justamente em desmascarar esse tipo de mentalidade doentia que confunde a própria neurose 
+            com a verdade dos fatos. Uma aula sobre a tirania do ego.
+          </p>
+        </div>
+      </article>
+
+      <article class="post">
+        <div class="post-img">Livro3</div>
+        <h3 class="post-title">Capitães de Areia</h3>
+        <div class="post-desc">
+          <!-- linhas de "skeleton" simulando resumo — troque por texto real -->
+          <p class="descricao">Um livro de peso que nos lembra da nossa obrigação social e da crueza da realidade brasileira. O Gênio Jorge Amado, aqui, no auge de sua força narrativa, não está
+            apenas contando a história de meninos de rua; ele está expondo a hipocrisia burguesa e a falência do Estado brasileiro em seu cerne.
+            Pedro Bala não é só um líder de gangue; é a personificação da resiliência e da organização que a vida selvagem impõe. É um líder nato, forjado na dor e na falta,
+            que estabelece sua própria ordem em um mundo de caos deixado pelos "adultos" e "cidadãos de bem". O livro é um soco no estômago nacionalista: como amar a pátria 
+            e fechar os olhos para a chaga viva das suas crianças abandonadas? A beleza e a dor estão na forma como Amado humaniza esses "delinquentes", mostrando que a virtude
+            (e o vício) podem florescer em qualquer ambiente. É um libelo contra a injustiça social que é tão brasileira quanto o samba e a corrupção.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer container">
+    <p>© 2025 Blog Literário — Template</p>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
