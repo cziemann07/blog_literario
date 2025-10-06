@@ -1,0 +1,352 @@
+/* mobile.css - Correções para dispositivos móveis */
+
+/* Tablets e telas médias */
+@media (max-width: 900px) {
+  :root {
+    --container-padding: 16px;
+    font-size: 15px;
+  }
+
+  /* Container geral */
+  .container {
+    padding: 20px 16px;
+  }
+
+  /* Header mobile */
+  .header-inner {
+    padding: 16px;
+  }
+
+  .logo svg {
+    width: 28px;
+    height: 24px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  /* Hero - 1 coluna */
+  .hero {
+    padding: 20px 0;
+  }
+
+  .hero-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    min-height: 200px;
+    padding: 16px;
+  }
+
+  .card .img {
+    height: 120px;
+  }
+
+  .card-desc {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .card-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  /* Featured posts - 1 coluna */
+  .featured {
+    padding: 32px 0;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .post-img {
+    height: 100px;
+  }
+
+  .post-title {
+    font-size: 17px;
+  }
+
+  .post-desc {
+    font-size: 14px;
+  }
+
+  .descricao {
+    line-height: 1.6;
+  }
+
+  /* Genres - 1 coluna */
+  .genres {
+    padding: 32px 0;
+  }
+
+  .genre-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .genre-card {
+    min-height: 150px;
+    padding: 20px;
+  }
+
+  .genre-label {
+    font-size: 15px;
+  }
+
+  .genre-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  /* Divider */
+  .divider {
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+
+  /* Footer */
+  .site-footer {
+    font-size: 13px;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+
+  /* Páginas de conteúdo */
+  .page-content article,
+  .analysis-article {
+    padding: 30px 20px;
+    margin: 20px 16px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  }
+
+  .page-content article h1,
+  .analysis-article h1 {
+    font-size: 1.7em;
+    line-height: 1.2;
+  }
+
+  .page-content article h2,
+  .analysis-article h2 {
+    font-size: 1.35em;
+    margin-top: 1.5em;
+  }
+
+  .page-content article p,
+  .analysis-article p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* Lista de obras */
+  .lista-obras {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .lista-obras li button {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .obra-detalhe {
+    padding: 24px 18px;
+    margin: 24px 0;
+  }
+
+  .obra-detalhe h2 {
+    font-size: 1.3em;
+  }
+
+  .obra-detalhe p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Poema */
+  .page-content [style*="white-space: pre-wrap"] {
+    font-size: 0.95em;
+    line-height: 1.8;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 520px) {
+  :root {
+    font-size: 14px;
+    --container-padding: 12px;
+  }
+
+  .container {
+    padding: 16px 12px;
+  }
+
+  /* Header compacto */
+  .header-inner {
+    padding: 12px;
+  }
+
+  .logo svg {
+    width: 26px;
+    height: 22px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  /* Hero - scroll horizontal */
+  .hero {
+    padding: 16px 0;
+  }
+
+  .hero-cards {
+    grid-auto-flow: column;
+    grid-auto-columns: 85%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .card {
+    scroll-snap-align: start;
+    min-height: 180px;
+    padding: 14px;
+  }
+
+  .card .img {
+    height: 100px;
+  }
+
+  .card-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Posts compactos */
+  .featured {
+    padding: 24px 0;
+  }
+
+  .featured-grid {
+    gap: 20px;
+  }
+
+  .post-img {
+    height: 80px;
+  }
+
+  .post-title {
+    font-size: 16px;
+  }
+
+  .post-desc {
+    font-size: 13px;
+  }
+
+  /* Genres compactos */
+  .genres {
+    padding: 24px 0;
+  }
+
+  .genre-cards {
+    gap: 12px;
+  }
+
+  .genre-card {
+    min-height: 130px;
+    padding: 16px;
+  }
+
+  .genre-label {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .genre-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Divider */
+  .divider {
+    padding: 16px 0;
+    margin-top: 24px;
+  }
+
+  /* Footer */
+  .site-footer {
+    font-size: 12px;
+    padding: 16px 0;
+    margin-top: 24px;
+  }
+
+  /* Páginas de conteúdo muito compactas */
+  .page-content article,
+  .analysis-article {
+    padding: 20px 16px;
+    margin: 12px 10px;
+    border-radius: 6px;
+  }
+
+  .page-content article h1,
+  .analysis-article h1 {
+    font-size: 1.5em;
+  }
+
+  .page-content article h2,
+  .analysis-article h2 {
+    font-size: 1.25em;
+    margin-top: 1.3em;
+  }
+
+  .page-content article p,
+  .analysis-article p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  /* Lista de obras */
+  .lista-obras li button {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .obra-detalhe {
+    padding: 18px 14px;
+  }
+
+  .obra-detalhe h2 {
+    font-size: 1.2em;
+  }
+
+  .obra-detalhe p {
+    font-size: 13px;
+  }
+
+  /* Poema compacto */
+  .page-content [style*="white-space: pre-wrap"] {
+    font-size: 0.85em;
+    line-height: 1.7;
+    padding: 0 4px;
+  }
+}
+
+/* Landscape em smartphones */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
