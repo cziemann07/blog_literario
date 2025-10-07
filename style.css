@@ -151,6 +151,31 @@ body{
   font-weight:600;
 }
 
+/* Estilos de Fundo para Todos os Cards - Apenas para garantir */
+.hero-cards .card .img {
+    background-size: cover;          /* Garante que a imagem cubra o espaço */
+    background-position: center;     /* Centraliza a imagem */
+    background-repeat: no-repeat;    /* Evita repetição */
+}
+
+/* 1. Imagem para o Card "Análises Literárias" */
+.hero-cards .card:nth-child(1) .img {
+    /* Use o caminho correto para a sua imagem */
+    background-image: url('imagens/analises.jpg'); 
+}
+
+/* 2. Imagem para o Card "Julio Verne" */
+.hero-cards .card:nth-child(2) .img {
+    /* Use o caminho correto para a sua imagem */
+    background-image: url('imagens/julioverne.jpg');
+}
+
+/* 3. Imagem para o Card "A importância da Leitura" */
+.hero-cards .card:nth-child(3) .img {
+    /* Use o caminho correto para a sua imagem */
+    background-image: url('imagens/leitura.jpg');
+}
+
 /* Botão dentro do card */
 .card-btn{
   background:#111;
